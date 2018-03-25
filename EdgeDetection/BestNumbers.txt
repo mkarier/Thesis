@@ -1,0 +1,16 @@
+Alpha 18
+Beta 59
+Canny 100
+For OPENGL window
+use 
+alpha = 17
+beta = 77
+canny = 78
+alpha 17
+beta 70
+canny Min 100
+
+
+alpha 16
+beta 72
+

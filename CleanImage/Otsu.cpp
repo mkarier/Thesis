@@ -8,13 +8,7 @@
 
 void regularThreshold(int, void *)
 {
-    if (!checkIfGrayScale(final_pic))
-    {
-        cout << "converting pic\n";
-        cvtColor(final_pic, src_gray, CV_BGR2GRAY);
-    }
-    else
-        src_gray = final_pic;
+    src_gray = getGrayscale(final_pic);
     threshold( src_gray, final_pic, threshold_value, max_BINARY_value,threshold_type );
 
     void (*next)(int, void *)  = *(++fun_it);

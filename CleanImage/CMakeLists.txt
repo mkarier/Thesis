@@ -14,7 +14,7 @@ set(SOURCE_FILES
         Canny.cpp
         Otsu.cpp
         SharedMethods.cpp Sobel.cpp
-        ../ImageCompare/ProcessImage.cpp)
+        ImageNode.cpp)
 find_package( OpenCV REQUIRED )
 find_package(Threads)
 add_executable(CleanImage ${SOURCE_FILES})

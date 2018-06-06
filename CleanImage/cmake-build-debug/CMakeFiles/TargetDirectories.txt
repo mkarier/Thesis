@@ -1,0 +1,3 @@
+/home/mkarier/Dropbox/Thesis/CleanImage/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mkarier/Dropbox/Thesis/CleanImage/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mkarier/Dropbox/Thesis/CleanImage/cmake-build-debug/CMakeFiles/CleanImage.dir

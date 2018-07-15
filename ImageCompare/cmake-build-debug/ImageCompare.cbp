@@ -92,6 +92,12 @@
 		<Unit filename="/home/mkarier/Dropbox/Thesis/ImageCompare/ImageCompare.h">
 			<Option target="ImageCompare"/>
 		</Unit>
+		<Unit filename="/home/mkarier/Dropbox/Thesis/ImageCompare/ImageNode.cpp">
+			<Option target="ImageCompare"/>
+		</Unit>
+		<Unit filename="/home/mkarier/Dropbox/Thesis/ImageCompare/ImageNode.h">
+			<Option target="ImageCompare"/>
+		</Unit>
 		<Unit filename="/home/mkarier/Dropbox/Thesis/ImageCompare/ProcessImage.cpp">
 			<Option target="ImageCompare"/>
 		</Unit>

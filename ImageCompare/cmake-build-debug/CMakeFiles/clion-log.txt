@@ -1,5 +1,4 @@
 /home/mkarier/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mkarier/Dropbox/Thesis/ImageCompare
--- Found OpenCV: /usr/local (found version "3.4.1") 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/mkarier/Dropbox/Thesis/ImageCompare/cmake-build-debug

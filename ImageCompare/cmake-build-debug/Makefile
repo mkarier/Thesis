@@ -150,6 +150,33 @@ ImageCompare.cpp.s:
 	$(MAKE) -f CMakeFiles/ImageCompare.dir/build.make CMakeFiles/ImageCompare.dir/ImageCompare.cpp.s
 .PHONY : ImageCompare.cpp.s
 
+ImageNode.o: ImageNode.cpp.o
+
+.PHONY : ImageNode.o
+
+# target to build an object file
+ImageNode.cpp.o:
+	$(MAKE) -f CMakeFiles/ImageCompare.dir/build.make CMakeFiles/ImageCompare.dir/ImageNode.cpp.o
+.PHONY : ImageNode.cpp.o
+
+ImageNode.i: ImageNode.cpp.i
+
+.PHONY : ImageNode.i
+
+# target to preprocess a source file
+ImageNode.cpp.i:
+	$(MAKE) -f CMakeFiles/ImageCompare.dir/build.make CMakeFiles/ImageCompare.dir/ImageNode.cpp.i
+.PHONY : ImageNode.cpp.i
+
+ImageNode.s: ImageNode.cpp.s
+
+.PHONY : ImageNode.s
+
+# target to generate assembly for a file
+ImageNode.cpp.s:
+	$(MAKE) -f CMakeFiles/ImageCompare.dir/build.make CMakeFiles/ImageCompare.dir/ImageNode.cpp.s
+.PHONY : ImageNode.cpp.s
+
 ProcessImage.o: ProcessImage.cpp.o
 
 .PHONY : ProcessImage.o
@@ -189,6 +216,9 @@ help:
 	@echo "... ImageCompare.o"
 	@echo "... ImageCompare.i"
 	@echo "... ImageCompare.s"
+	@echo "... ImageNode.o"
+	@echo "... ImageNode.i"
+	@echo "... ImageNode.s"
 	@echo "... ProcessImage.o"
 	@echo "... ProcessImage.i"
 	@echo "... ProcessImage.s"

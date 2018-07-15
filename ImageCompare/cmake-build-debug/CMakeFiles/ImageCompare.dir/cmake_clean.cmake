@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ImageCompare.dir/ImageCompare.cpp.o"
   "CMakeFiles/ImageCompare.dir/ProcessImage.cpp.o"
+  "CMakeFiles/ImageCompare.dir/ImageNode.cpp.o"
   "ImageCompare.pdb"
   "ImageCompare"
 )

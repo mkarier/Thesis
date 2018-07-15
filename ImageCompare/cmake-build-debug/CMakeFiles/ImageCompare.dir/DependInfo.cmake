@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mkarier/Dropbox/Thesis/ImageCompare/ImageCompare.cpp" "/home/mkarier/Dropbox/Thesis/ImageCompare/cmake-build-debug/CMakeFiles/ImageCompare.dir/ImageCompare.cpp.o"
+  "/home/mkarier/Dropbox/Thesis/ImageCompare/ImageNode.cpp" "/home/mkarier/Dropbox/Thesis/ImageCompare/cmake-build-debug/CMakeFiles/ImageCompare.dir/ImageNode.cpp.o"
   "/home/mkarier/Dropbox/Thesis/ImageCompare/ProcessImage.cpp" "/home/mkarier/Dropbox/Thesis/ImageCompare/cmake-build-debug/CMakeFiles/ImageCompare.dir/ProcessImage.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

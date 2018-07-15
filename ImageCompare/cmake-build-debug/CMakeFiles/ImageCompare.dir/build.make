@@ -105,37 +105,63 @@ CMakeFiles/ImageCompare.dir/ProcessImage.cpp.o.provides: CMakeFiles/ImageCompare
 CMakeFiles/ImageCompare.dir/ProcessImage.cpp.o.provides.build: CMakeFiles/ImageCompare.dir/ProcessImage.cpp.o
 
 
+CMakeFiles/ImageCompare.dir/ImageNode.cpp.o: CMakeFiles/ImageCompare.dir/flags.make
+CMakeFiles/ImageCompare.dir/ImageNode.cpp.o: ../ImageNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mkarier/Dropbox/Thesis/ImageCompare/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ImageCompare.dir/ImageNode.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ImageCompare.dir/ImageNode.cpp.o -c /home/mkarier/Dropbox/Thesis/ImageCompare/ImageNode.cpp
+
+CMakeFiles/ImageCompare.dir/ImageNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ImageCompare.dir/ImageNode.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mkarier/Dropbox/Thesis/ImageCompare/ImageNode.cpp > CMakeFiles/ImageCompare.dir/ImageNode.cpp.i
+
+CMakeFiles/ImageCompare.dir/ImageNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ImageCompare.dir/ImageNode.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mkarier/Dropbox/Thesis/ImageCompare/ImageNode.cpp -o CMakeFiles/ImageCompare.dir/ImageNode.cpp.s
+
+CMakeFiles/ImageCompare.dir/ImageNode.cpp.o.requires:
+
+.PHONY : CMakeFiles/ImageCompare.dir/ImageNode.cpp.o.requires
+
+CMakeFiles/ImageCompare.dir/ImageNode.cpp.o.provides: CMakeFiles/ImageCompare.dir/ImageNode.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ImageCompare.dir/build.make CMakeFiles/ImageCompare.dir/ImageNode.cpp.o.provides.build
+.PHONY : CMakeFiles/ImageCompare.dir/ImageNode.cpp.o.provides
+
+CMakeFiles/ImageCompare.dir/ImageNode.cpp.o.provides.build: CMakeFiles/ImageCompare.dir/ImageNode.cpp.o
+
+
 # Object files for target ImageCompare
 ImageCompare_OBJECTS = \
 "CMakeFiles/ImageCompare.dir/ImageCompare.cpp.o" \
-"CMakeFiles/ImageCompare.dir/ProcessImage.cpp.o"
+"CMakeFiles/ImageCompare.dir/ProcessImage.cpp.o" \
+"CMakeFiles/ImageCompare.dir/ImageNode.cpp.o"
 
 # External object files for target ImageCompare
 ImageCompare_EXTERNAL_OBJECTS =
 
 ImageCompare: CMakeFiles/ImageCompare.dir/ImageCompare.cpp.o
 ImageCompare: CMakeFiles/ImageCompare.dir/ProcessImage.cpp.o
+ImageCompare: CMakeFiles/ImageCompare.dir/ImageNode.cpp.o
 ImageCompare: CMakeFiles/ImageCompare.dir/build.make
-ImageCompare: /usr/local/lib/libopencv_dnn.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_ml.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_objdetect.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_shape.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_stitching.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_superres.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_videostab.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_viz.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_calib3d.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_features2d.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_flann.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_highgui.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_photo.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_video.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_videoio.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_imgcodecs.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_imgproc.so.3.3.0
-ImageCompare: /usr/local/lib/libopencv_core.so.3.3.0
+ImageCompare: /usr/local/lib/libopencv_dnn.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_ml.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_objdetect.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_shape.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_stitching.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_superres.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_videostab.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_viz.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_calib3d.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_features2d.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_flann.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_highgui.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_photo.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_video.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_videoio.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_imgcodecs.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_imgproc.so.3.4.1
+ImageCompare: /usr/local/lib/libopencv_core.so.3.4.1
 ImageCompare: CMakeFiles/ImageCompare.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mkarier/Dropbox/Thesis/ImageCompare/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ImageCompare"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mkarier/Dropbox/Thesis/ImageCompare/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ImageCompare"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ImageCompare.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -145,6 +171,7 @@ CMakeFiles/ImageCompare.dir/build: ImageCompare
 
 CMakeFiles/ImageCompare.dir/requires: CMakeFiles/ImageCompare.dir/ImageCompare.cpp.o.requires
 CMakeFiles/ImageCompare.dir/requires: CMakeFiles/ImageCompare.dir/ProcessImage.cpp.o.requires
+CMakeFiles/ImageCompare.dir/requires: CMakeFiles/ImageCompare.dir/ImageNode.cpp.o.requires
 
 .PHONY : CMakeFiles/ImageCompare.dir/requires
 

@@ -1,0 +1,8 @@
+Second Smallest: 0.0016879
+Third Smallest: 0.0020246
+Fourth Smallest: 0.00281997
+Fifth Smallest: 0.00313174
+Largest: 13.5272
+secondLargest: 11.7945
+thirdLargest: 11.2634
+fourthLargest: 9.79365

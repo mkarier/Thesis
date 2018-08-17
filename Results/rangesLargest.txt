@@ -1,0 +1,9 @@
+Second Smallest: 0.0154983
+Third Smallest: 0.0157423
+Fourth Smallest: 0.0238184
+Fifth Smallest: 0.0326575
+
+Largest: 12.7103  scan1-103 & scan1-166
+secondLargest: 12.4833 scan1-103 & scan1-156
+thirdLargest: 12.3566 scan1-103 & scan1-170
+fourthLargest: 11.6735 scan1-189 & 103

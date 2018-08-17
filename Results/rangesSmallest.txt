@@ -1,0 +1,6 @@
+Second Smallest: 0.0154983
+ scan1-192 & scan1-187
+Third Smallest: 0.0157423 scan1-187 & scan1-192
+
+Fourth Smallest: 0.0238184 scan1-189 & scan1-194 
+Fifth Smallest: 0.0326575 scan1-197 & scan1-25, scan1-197 & scan1-26, scan1-25 & scan-197

@@ -19,11 +19,13 @@
 #include "ImageNode.h"
 
 vector<void (*)(int, void *)>methods =  {
-                                            /*addFrame,
+											//printGaussianKernel,
+                                            //addFrame,
                                             //gaussianBlur,
-                                            gaussianBlur,
-											sobelEdgeDetection,
-											regularThreshold,//*/
+                                            //gaussianBlur,
+											//sobelEdgeDetection,
+											//otsuThreshold,
+											//regularThreshold,//*/
                                             // highContrast,
                                              //colorReduce,
                                              //dhwt2d,
@@ -37,7 +39,7 @@ vector<void (*)(int, void *)>methods =  {
                                              //CannyThreshold,
                                              //regularBlur,
                                              
-                                             //otsuThreshold,
+                                             
                                    
                                              //sobelEdgeDetection,
 
@@ -45,6 +47,7 @@ vector<void (*)(int, void *)>methods =  {
                                          };
 
 vector<void  (*)(int, void *)>::iterator fun_it;
+bool runningScript = false;
 int read_in_style = CV_LOAD_IMAGE_GRAYSCALE;
 int threshold_value = 0;
 int threshold_type = 0;
@@ -53,15 +56,16 @@ int const max_type = 4;
 int const max_BINARY_value = 255;
 int alpha = 10;
 int beta = 0;
-int thickness = 1;
+int thickness = 3;
 
 int edgeThresh = 1;
 int lowThreshold;
 int const max_lowThreshold = 100;
 int c_ratio = 3;
-int kernel_size = 3;
+int kernel_size = 7;
 int frame_left = 0, frame_right = 0, frame_top = 0, frame_bottom = 0;
-
+int retreiveType = RETR_EXTERNAL;
+int chainType = CHAIN_APPROX_NONE;
 
 //for otsu
 int otsu_total = 0;
@@ -117,7 +121,7 @@ void callImageCompare(Mat pic)
     vector<vector<Point>> tempContours;
     vector<Vec4i> tempHierarchy;
     Mat gray_scale = getGrayscale(current_final);
-    findContours(gray_scale, tempContours, tempHierarchy, RETR_EXTERNAL, CHAIN_APPROX_NONE);
+    findContours(gray_scale, tempContours, tempHierarchy, retreiveType, chainType);
     for(ImageNode node : dataBase)
     {
         node.compareImage(tempContours);
@@ -158,7 +162,38 @@ void callPrintGroup()
         windows.push_back(value);
     }
     printGroups(windows, current_final);
+}//end of callPrintGroup
+
+void printHu(double * hu)
+{
+	for(int i = 0; i < 7; i++)
+	{
+		cout << "hu["<< i<< "] = " << hu[i] << endl;
+	}
 }
+void callFindMoments(Mat pic)
+{
+	vector<vector<Point>> tempContours;
+    vector<Vec4i> tempHierarchy;
+    Mat gray_scale = getGrayscale(current_final);
+    findContours(gray_scale, tempContours, tempHierarchy, retreiveType, chainType);
+	vector<Moments> mu(tempContours.size() );
+	for( size_t i = 0; i < tempContours.size(); i++ )
+	{
+		mu[i] = moments( tempContours[i], false ); 
+		//cout << mu << endl;
+	}
+	double hu[7];
+	for(size_t i = 0; i < tempContours.size(); i++)
+	{
+		HuMoments(mu[i], hu);
+		cout << "moment " << i << ": " << endl;
+		printHu(hu);
+	}
+}//end of callFindMoments
+
+
+
 void callSearchContours(Mat pic)
 {
     ///TODO: ask for user input about the specific contours to look for then search for contours
@@ -179,7 +214,7 @@ void callSearchContours(Mat pic)
     vector<vector<Point>> tempContours;
     vector<Vec4i> tempHierarchy;
     Mat gray_scale = getGrayscale(current_final);
-    findContours(gray_scale, tempContours, tempHierarchy, RETR_EXTERNAL, CHAIN_APPROX_NONE);
+    findContours(gray_scale, tempContours, tempHierarchy, retreiveType, chainType);
     vector<vector<Point>> mainContours;
     cout << "adding contours to a list" << endl;
     for(int index = 0; index < indexContours.size(); index++)
@@ -210,7 +245,7 @@ int main(int argc, char * argv[]) {
             return -1;
         }
     }
-    if(argc = 4)
+    if(argc == 4)
     {
         path = argv[2];
 		stringstream str(argv[3]);
@@ -262,16 +297,20 @@ int main(int argc, char * argv[]) {
     createButton("Print individual Contours", reinterpret_cast<ButtonCallback>(callPrintIndividualContour), &final_pic, CV_PUSH_BUTTON);
     createButton("Print Certain contours", reinterpret_cast<ButtonCallback>(callPrintGroup), nullptr, CV_PUSH_BUTTON);
     createButton("Search Contours", reinterpret_cast<ButtonCallback>(callSearchContours), nullptr, CV_PUSH_BUTTON);
-    //buffArray(input);
+	createButton("Print Moments", reinterpret_cast<ButtonCallback>(callFindMoments), nullptr, CV_PUSH_BUTTON);
+	
     input.copyTo(final_pic);
     fun_it = methods.begin();
     methods[0](0,0);
 
     ///Uncomment this so for the script
+	if(runningScript == true)
+	{
         callImageCompare(final_pic);
 		//callSearchContours(final_pic);
         destroyAllWindows();
         return 0;//*/
+	}
 
 
     imshow(ctrl, original);
